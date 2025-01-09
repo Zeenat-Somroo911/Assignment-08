@@ -1,25 +1,25 @@
-'use client'
-import { useState } from 'react'
-import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
+import { Menu, X } from 'lucide-react';
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <header className="bg-transparent backdrop-blur-lg text-blue-500 shadow-lg sticky top-0 border-b-4 border-blue-500">
+    <header className="bg-transparent backdrop-blur-lg text-blue-900 shadow-lg sticky top-0 border-b-4 border-blue-500">
       <nav className="container mx-auto px-4 py-6 z-20">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold flex items-center">
-            Novels Blog
+            Cars Collection
           </Link>
           <div className="lg:hidden">
             <button onClick={toggleMenu} className="text-white focus:outline-none">
-              {isMenuOpen ? <X size={24} className="text-black" /> : <Menu size={24} className="text-black" />}
+              {isMenuOpen ? <X size={25} className="text-black" /> : <Menu size={24} className="text-black" />}
             </button>
           </div>
           <ul
@@ -39,5 +39,5 @@ export default function Header() {
         </div>
       </nav>
     </header>
-  )
+  );
 }
